@@ -7,6 +7,7 @@ Vim plugin to highlight current block based on indentation levels.
   * Works with multiple buffers/splits/windows
   * Configurable to set custom highlight color
   * Easily toggle highlights
+  * Fixed the annoying 'Press ENTER to continue' on long lines
 
 ## Usage
 
@@ -25,11 +26,11 @@ For example, to map :IndentHighlightToggle to <leader>i ,
 This plugin follows the standard runtime path structure, and as such it can be installed with a variety of plugin managers:
 
 *  Pathogen
-  *  `git clone https://github.com/emilsoman/indent-highlight.vim ~/.vim/bundle/indent-highlight.vim`
+  *  `git clone https://github.com/grwlf/indent-highlight.vim ~/.vim/bundle/indent-highlight.vim`
 *  NeoBundle
-  *  `NeoBundle 'emilsoman/indent-highlight.vim'`
+  *  `NeoBundle 'grwlf/indent-highlight.vim'`
 *  Vundle
-  *  `Plugin 'emilsoman/indent-highlight.vim'`
+  *  `Plugin 'grwlf/indent-highlight.vim'`
 *  manual
   *  copy all of the files into your `~/.vim` directory
 
@@ -44,3 +45,4 @@ These configurations are available to set in your `~/.vimrc`
 ## License
 
 MIT License. Copyright (c) 2014 Emil Soman
+MIT License. Copyright (c) 2023 Sergei Mironov
