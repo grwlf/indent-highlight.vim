@@ -8,6 +8,7 @@ Vim plugin to highlight current block based on indentation levels.
   * Configurable to set custom highlight color
   * Easily toggle highlights
   * Fixed the annoying 'Press ENTER to continue' on long lines
+  * Restore highlighting correctly
 
 ## Usage
 

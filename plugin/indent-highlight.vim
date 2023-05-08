@@ -285,12 +285,13 @@ call s:InitHighlightGroup()
 augroup indent_highlight
   autocmd!
 
-  if !get(g:, 'indent_highlight_disabled', 0)
-    " On cursor move, we check if line number has changed
-    autocmd CursorMoved,CursorMovedI * call RefreshIndentHighlightOnCursorMove()
-    " On timeout we check if we need to rehighlight
-    autocmd CursorHold,CursorHoldI * call RefreshIndentHighlightOnCursorHold()
-  endif
+  " Repair colors
+  autocmd ColorScheme * :call s:InitHighlightGroup()
+
+  " On cursor move, we check if line number has changed
+  autocmd CursorMoved,CursorMovedI * call RefreshIndentHighlightOnCursorMove()
+  " On timeout we check if we need to rehighlight
+  autocmd CursorHold,CursorHoldI * call RefreshIndentHighlightOnCursorHold()
 
 augroup END
 
