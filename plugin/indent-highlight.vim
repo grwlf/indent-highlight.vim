@@ -98,7 +98,8 @@ function! s:CurrentBlockIndentPattern(echoHeaderLine)
   let indentLength = blockStart[1]
   " Print the header line
   if startLineNumber != currentLineNumber && a:echoHeaderLine
-    echo getline(startLineNumber)[0:max([1,min([winwidth(0)-15,&colorcolumn-1])])]
+    let maxwidth = max([1,min([winwidth(0)-15,max([&colorcolumn,80])-1])])
+    echo getline(startLineNumber)[0:maxwidth]
   endif
   let headerIndent = indent(startLineNumber)
 
